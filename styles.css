@@ -383,7 +383,10 @@ body {
     background-size: cover;
     position: relative;
     font-family: "Cairo", sans-serif;
+    overflow-x: hidden;
 }
+
+
 
 .hero::before {
     content: "";
@@ -407,6 +410,41 @@ body {
 
 .about, .classes, .contact, footer {
     font-family: "Cairo", sans-serif;
+    overflow: hidden;
+}
+
+.teacher-img-container {
+    animation: swipe-right .8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.teacher-info-text {
+    animation: swipe-left .8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes swipe-right {
+    from {
+        transform: translateX(20px);
+        opacity: .6;
+    }
+
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes swipe-left {
+    from {
+        transform: translateX(-20px);
+        opacity: .6;
+    }
+
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .teacher-img-container {
@@ -437,13 +475,12 @@ body {
 }
 
 .card p {
-    /*  font-family: "Amiri", sans-sarif; */
     color: var(--black2-clr-);
 
 }
 
 .creator {
-    font-size: .8rem;
+    font-size: 1rem;
     font-weight: 500;
 }
 
@@ -458,4 +495,52 @@ input:not(:placeholder-shown):user-valid {
 
 input:user-invalid {
     outline-color: var(--accent-orange-red-);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.opacity-100 {
+    opacity: 1;
+}
+
+.translate-y-4 {
+    transform: translateY(50px);
+}
+
+.translate-x-4 {
+    transform: translateX(50px);
+}
+
+.translate-x-0 {
+    transform: translateX(0);
+}
+
+footer .container div>a svg {
+    stroke-width: .6px;
+    inline-size: 2rem;
+    block-size: 2rem;
+}
+
+.copy {
+    vertical-align: middle;
+    font-size: 1rem;
+    font-weight: 100;
 }
