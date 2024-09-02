@@ -386,8 +386,6 @@ body {
     overflow-x: hidden;
 }
 
-
-
 .hero::before {
     content: "";
     width: 100%;
