@@ -542,3 +542,33 @@ footer .container div>a svg {
     font-size: 1rem;
     font-weight: 100;
 }
+
+/* Banner */
+.relative {
+    position: relative;
+    display: inline-block;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.bg-opacity-70 {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.p-2 {
+    padding: 0.5rem;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
